@@ -1,18 +1,69 @@
 <%= form_with model: product do |form| %>
-    <div>
-      <%= form.label :name %>
-      <%= form.text_field :name %>
-    </div>
-    <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.rich_text_area :description %>
+  <div style="
+    margin-bottom: 20px;">
+    <%= form.label :name, "Product Name", style: "
+      display: block; 
+      font-family: 'Arial', sans-serif; 
+      font-size: 16px; 
+      font-weight: bold; 
+      color: #264653; 
+      margin-bottom: 5px;" %>
+    <%= form.text_field :name, style: "
+      width: 100%; 
+      padding: 10px; 
+      font-size: 14px; 
+      border: 1px solid #ccc; 
+      border-radius: 5px; 
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);" %>
   </div>
-  <div>
-  <%= form.label :featured_image, style: "display: block" %>
-  <%= form.file_field :featured_image, accept: "image/*" %>
-</div>
-    <div>
-      <%= form.submit %>
-    </div>
-  <% end %>
+
+  <div style="
+    margin-bottom: 20px;">
+    <%= form.label :description, "Description", style: "
+      display: block; 
+      font-family: 'Arial', sans-serif; 
+      font-size: 16px; 
+      font-weight: bold; 
+      color: #264653; 
+      margin-bottom: 5px;" %>
+    <%= form.rich_text_area :description, style: "
+      width: 100%; 
+      padding: 10px; 
+      font-size: 14px; 
+      border: 1px solid #ccc; 
+      border-radius: 5px; 
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);" %>
+  </div>
+
+  <div style="
+    margin-bottom: 20px;">
+    <%= form.label :featured_image, "Featured Image", style: "
+      display: block; 
+      font-family: 'Arial', sans-serif; 
+      font-size: 16px; 
+      font-weight: bold; 
+      color: #264653; 
+      margin-bottom: 5px;" %>
+    <%= form.file_field :featured_image, accept: "image/*", style: "
+      display: block; 
+      font-size: 14px;" %>
+  </div>
+
+  <div style="
+    text-align: center; 
+    margin-top: 20px;">
+    <%= form.submit "Save Product", style: "
+      background-color: #2a9d8f; /* Xanh ngọc đậm */ 
+      color: white; 
+      padding: 10px 20px; 
+      border: none; 
+      border-radius: 5px; 
+      font-size: 16px; 
+      font-weight: bold; 
+      cursor: pointer; 
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+      transition: background-color 0.3s ease-in-out;" %>
+  </div>
+<% end %>
+
   

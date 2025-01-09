@@ -1,10 +1,188 @@
-/*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
+/* Cài đặt toàn bộ trang */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Thanh điều hướng */
+  nav {
+    justify-content: flex-end;
+    display: flex;
+    font-size: 0.875em;
+    gap: 0.5rem;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #2a9d8f; /* Xanh ngọc */
+    border-radius: 8px;
+  }
+  
+  nav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: #21867a; /* Xanh đậm */
+  }
+  
+  /* Thông báo */
+  .notice {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+  }
+  
+  /* Định dạng khu vực chính */
+  main {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Phần tử sản phẩm */
+  section.product {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  section.product img {
+    border-radius: 8px;
+    flex-basis: 50%;
+    max-width: 50%;
+    object-fit: cover; /* Đảm bảo ảnh luôn giữ tỷ lệ */
+  }
+  
+  /* Thông tin sản phẩm */
+  section.product-info {
+    flex-basis: 50%;
+  }
+  
+  section.product-info h1 {
+    font-size: 1.8em;
+    color: #2a9d8f;
+    margin-bottom: 10px;
+  }
+  
+  section.product-info p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  /* Các nút chức năng */
+  button, a {
+    display: inline-block;
+    background-color: #4db8ff; /* Xanh nhạt */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
+  }
+  
+  button:hover, a:hover {
+    background-color: #21867a; /* Xanh đậm */
+  }
+  
+  button {
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Thiết kế cho khu vực hiển thị danh sách sản phẩm */
+  #products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+  }
+  
+  #products div {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  #products div:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  #products a {
+    font-size: 1.2em;
+    color: #264653;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  #products a:hover {
+    color: #2a9d8f;
+    text-decoration: underline;
+  }
+  
+  /* Tạo hiệu ứng cho ảnh sản phẩm */
+  img {
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* Tùy chỉnh cho các phần tử khác như form */
+  input[type="text"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  input[type="submit"] {
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #21867a;
+  }
+  
